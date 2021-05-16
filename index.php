@@ -102,8 +102,8 @@ session_start();
             </div>
             <div class="project">
                 <div class="project-name">
-                    <h1 id="en"><span>t</span>oDoList</h1>
-                    <h1 id="cz"><span>ú</span>koly</h1><h1><i class="fas fa-chevron-right"></i></h1>
+                    <h1 id="en"><span>T</span>oDoList</h1>
+                    <h1 id="cz"><span>Ú</span>koly</h1><h1><i class="fas fa-chevron-right"></i></h1>
                 </div>
                 <div class="project-text">
                     <p id="en">A simple todo list, on which I tried basic work with the DOM in JavaScript and saving individual tasks to Local storage. The application keeps data even after the page is refreshed.</p>
@@ -124,23 +124,24 @@ session_start();
             </div>
             <div class="project">
                 <div class="project-name">
-                    <h1 id="en"><span>p</span>roject1</h1>
-                    <h1 id="cz"><span>p</span>rojekt1</h1><h1><i class="fas fa-chevron-right"></i></h1>
+                    <h1 id="en"><span>T</span>he Hotel</h1>
+                    <h1 id="cz"><span>T</span>he Hotel</h1><h1><i class="fas fa-chevron-right"></i></h1>
                 </div>
                 <div class="project-text">
-                    <p>Facilis repudiandae rem porro enim adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, recusandae blanditiis nostrum repellat nemo debitis ut praesentium consectetur aliquam pariatur dicta atque quaerat. Expedita corrupti minima, tenetur distinctio vitae amet?</p>
+                    <p id="en">The hotel project was an exam during my retraining course. The exam was focused on Bootstrap framework and we had 8h limit to finished it. Used Koala SASS compiler. Bootstrap 4.6.</p>
+                    <p id="cz">Úvodní webová prezentace imaginárního hotelu. Jednalo se o projekt vytvořený v Bootstrapu 4.6 během 8 hodinové zkoušky v rekvalifikačním kurzu OOP a web developmentu. Pro práci se SASS soubory byl použit Koala kompilátor.</p>                
                 </div>
                 <div class="project-img">
-                    <a  target="_blank">
+                    <a href="https://www.lukaskrbec.com/projects/hotel/index.html" target="_blank">
                         <i class="fas fa-external-link-alt"></i>
-                        <img src="img/inProgress.png" alt="">
+                        <img src="img/theHotel.png" alt="">
                     </a>
                 </div>
                 <div class="project-git">
-                    <a href="https://github.com/LukasKrbec" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/LukasKrbec/Hotel" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="project-languages">
-                    <span>#HTML #CSS #JS</span>
+                    <span>#Bootstrap 4.6</span>
                 </div>
             </div>
             <div class="project">
