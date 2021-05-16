@@ -128,8 +128,8 @@ session_start();
                     <h1 id="cz"><span>T</span>he Hotel</h1><h1><i class="fas fa-chevron-right"></i></h1>
                 </div>
                 <div class="project-text">
-                    <p id="en">The hotel project was an exam during my retraining course. The exam was focused on Bootstrap framework and we had 8h limit to finished it. Used Koala SASS compiler. Bootstrap 4.6.</p>
-                    <p id="cz">Úvodní webová prezentace imaginárního hotelu. Jednalo se o projekt vytvořený v Bootstrapu 4.6 během 8 hodinové zkoušky v rekvalifikačním kurzu OOP a web developmentu. Pro práci se SASS soubory byl použit Koala kompilátor.</p>                
+                    <p id="en">The hotel project was an exam during my retraining course. The exam was focused on Bootstrap framework and we had 8h limit to finished it. Used Koala SASS compiler. Bootstrap 4.6. After the exam, I added a booking form in JS to the project.</p>
+                    <p id="cz">Úvodní webová prezentace imaginárního hotelu. Jednalo se o projekt vytvořený v Bootstrapu 4.6 během 8 hodinové zkoušky v rekvalifikačním kurzu OOP a web developmentu. Pro práci se SASS soubory byl použit Koala kompilátor. Po zkoušce jsem projekt doplnil o rezervační formulář v JS.</p>                
                 </div>
                 <div class="project-img">
                     <a href="https://www.lukaskrbec.com/projects/hotel/index.html" target="_blank">
@@ -141,25 +141,26 @@ session_start();
                     <a href="https://github.com/LukasKrbec/Hotel" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="project-languages">
-                    <span>#Bootstrap 4.6</span>
+                    <span>#JS #Bootstrap 4.6</span>
                 </div>
             </div>
             <div class="project">
                 <div class="project-name">
-                    <h1 id="en"><span>p</span>roject2</h1>
-                    <h1 id="cz"><span>p</span>rojekt2</h1><h1><i class="fas fa-chevron-right"></i></h1>
+                    <h1 id="en"><span>B</span>agruj Morava</h1>
+                    <h1 id="cz"><span>B</span>agruj Morava</h1><h1><i class="fas fa-chevron-right"></i></h1>
                 </div>
                 <div class="project-text">
-                    <p>Facilis repudiandae rem porro enim adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, recusandae blanditiis nostrum repellat nemo debitis ut praesentium consectetur aliquam pariatur dicta atque quaerat. Expedita corrupti minima, tenetur distinctio vitae amet?</p>
+                    <p id="en">Web presentation inspired by my cousin's company. This is a project created only in HTML5, CSS3 with little bit of JS for the price list section. On the project, I learned to create a responsive website.</p>
+                    <p id="cz">Webová prezentace inspirovaná firmou mého bratrance. Jedná se o projekt vytvořený pouze v HTML5, CSS3 s trochou JS pro sekci Ceník. Na projektu jsem si vyzkoušel vytvoření responzivního webu.</p>     
                 </div>
                 <div class="project-img">
-                    <a  target="_blank">
+                    <a href="https://www.lukaskrbec.com/projects/bagrujMorava/index.html" target="_blank">
                         <i class="fas fa-external-link-alt"></i>
-                        <img src="img/inProgress.png" alt="">
+                        <img src="img/bagrujMorava.png" alt="">
                     </a>
                 </div>
                 <div class="project-git">
-                    <a href="https://github.com/LukasKrbec" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/LukasKrbec/bagrujMorava" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="project-languages">
                     <span>#HTML #CSS #JS</span>
@@ -167,8 +168,8 @@ session_start();
             </div>
             <div class="project">
                 <div class="project-name">
-                    <h1 id="en"><span>p</span>roject3</h1>
-                    <h1 id="cz"><span>p</span>rojekt3</h1><h1><i class="fas fa-chevron-right"></i></h1>
+                    <h1 id="en"><span>p</span>roject4</h1>
+                    <h1 id="cz"><span>p</span>rojekt4</h1><h1><i class="fas fa-chevron-right"></i></h1>
                 </div>
                 <div class="project-text">
                     <p>Facilis repudiandae rem porro enim adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, recusandae blanditiis nostrum repellat nemo debitis ut praesentium consectetur aliquam pariatur dicta atque quaerat. Expedita corrupti minima, tenetur distinctio vitae amet?</p>
