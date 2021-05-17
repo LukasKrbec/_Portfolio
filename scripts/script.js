@@ -13,6 +13,18 @@ const menuSlide = function(){
         // e.stopPropagation()
     })    
 }
+function closeGallery(){
+    const closeGalleryBtn = document.querySelector("#gallery-btn")
+    closeGalleryBtn.addEventListener("click", function(){
+        document.querySelector(".gallery").classList.add("passive")
+    })
+}
+function openGallery(){
+    const openGalleryBtn = document.querySelector("#heart")
+    openGalleryBtn.addEventListener("click", function(){
+        document.querySelector(".gallery").classList.remove("passive")
+    })
+}
 const translate = function(){
     const cz = document.querySelector(".cz-switch")
     const en = document.querySelector(".en-switch")
@@ -238,8 +250,11 @@ const notRobot = function() {
         }
     }
 }
+// ======================= 3D animace ===============================
 
 
+
+// ==================================================================
 
 changeProject();
 menuSlide();
@@ -248,3 +263,5 @@ nav();
 skills();
 notRobot();
 emailFormCheck();
+closeGallery();
+openGallery();
