@@ -255,7 +255,6 @@ function animaceSkills() {
 
     skillsText.forEach((skillText, index) => {
         const skillBtn = skillsBtn[index];
-        console.log(skillBtn, skillText);
         //Movement Animation to happen
         const card = document.querySelector(skillText);
         const container = document.querySelector(skillBtn);
@@ -269,8 +268,7 @@ function animaceSkills() {
             let xAxis = (container.offsetWidth / 2 - e.offsetX) * -1 / 3.5;
             let yAxis = (container.offsetHeight / 2 - e.offsetY) / 1.5;
             card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-            console.log(yAxis)
-            console.log(xAxis)
+        
 
         });
         //Animate In
@@ -311,4 +309,6 @@ notRobot();
 emailFormCheck();
 closeGallery();
 openGallery();
-animaceSkills()
+if(window.innerWidth > 1000){
+    animaceSkills()
+}
