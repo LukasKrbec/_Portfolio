@@ -1,31 +1,31 @@
-const menuSlide = function(){
+const menuSlide = function () {
     const menuLines = document.querySelector(".menu-lines")
     const menu = document.querySelector(".menu")
-    
-    window.addEventListener("click", function (){
+
+    window.addEventListener("click", function () {
         menu.classList.remove("menu-active")
     })
-    menuLines.addEventListener("click", function (e){
+    menuLines.addEventListener("click", function (e) {
         menu.classList.add("menu-active")
         e.stopPropagation()
     })
-    menu.addEventListener("click", function (e){
+    menu.addEventListener("click", function (e) {
         // e.stopPropagation()
-    })    
+    })
 }
-function closeGallery(){
+function closeGallery() {
     const closeGalleryBtn = document.querySelector("#gallery-btn")
-    closeGalleryBtn.addEventListener("click", function(){
+    closeGalleryBtn.addEventListener("click", function () {
         document.querySelector(".gallery").classList.add("passive")
     })
 }
-function openGallery(){
+function openGallery() {
     const openGalleryBtn = document.querySelector("#heart")
-    openGalleryBtn.addEventListener("click", function(){
+    openGalleryBtn.addEventListener("click", function () {
         document.querySelector(".gallery").classList.remove("passive")
     })
 }
-const translate = function(){
+const translate = function () {
     const cz = document.querySelector(".cz-switch")
     const en = document.querySelector(".en-switch")
     const cz_text = document.querySelectorAll("#cz")
@@ -37,13 +37,13 @@ const translate = function(){
 
     translateCz()
 
-    function translateCz(){
+    function translateCz() {
         en.classList.remove("translate-active")
         cz.classList.add("translate-active")
-        for(let section of en_text){
+        for (let section of en_text) {
             section.style.display = "none"
         }
-        for(let section of cz_text){
+        for (let section of cz_text) {
             section.style.display = "inline-block"
         }
         contact_email.placeholder = "vas@email.com"
@@ -51,13 +51,13 @@ const translate = function(){
         contact_btn.value = "odeslat"
         contact_language[0].value = "cz"
     }
-    function translateEn(){
+    function translateEn() {
         cz.classList.remove("translate-active")
         en.classList.add("translate-active")
-        for(let section of cz_text){
+        for (let section of cz_text) {
             section.style.display = "none"
         }
-        for(let section of en_text){
+        for (let section of en_text) {
             section.style.display = "inline-block"
         }
         contact_email.placeholder = "your@email.com"
@@ -69,7 +69,7 @@ const translate = function(){
     en.addEventListener("click", translateEn)
 }
 
-function nav(){
+function nav() {
     const menuItems = document.querySelectorAll("main")
     const menuLabels = document.querySelectorAll(".menu a")
     const about = document.querySelector(".menu-about")
@@ -81,25 +81,26 @@ function nav(){
     const contact = document.querySelector(".menu-contact")
     contact.addEventListener("click", goToPage)
 
-    function goToPage(){
-        for(let menuLabel of menuLabels){
+    function goToPage() {
+        for (let menuLabel of menuLabels) {
             menuLabel.classList.remove("active")
         }
-        for(let menuItem of menuItems){
+        for (let menuItem of menuItems) {
             menuItem.classList.add("passive")
-            if(menuItem.id.trim() == this.className.substring(5).trim()){
-                menuItem.classList.remove("passive")}
+            if (menuItem.id.trim() == this.className.substring(5).trim()) {
+                menuItem.classList.remove("passive")
+            }
         }
         this.classList.add("active")
     }
 }
-function changeProject(){
+function changeProject() {
     const redArrowLeft = document.querySelector(".left-arrow-conteiner")
     redArrowLeft.addEventListener("click", prevProject)
     const redArrowRight = document.querySelector(".right-arrow-conteiner")
     redArrowRight.addEventListener("click", nextProject)
     const blackArrowsRight = document.querySelectorAll(".project-name i")
-    for(let blackArrowRight of blackArrowsRight){
+    for (let blackArrowRight of blackArrowsRight) {
         blackArrowRight.addEventListener("click", nextProject)
     }
     const projects = document.querySelectorAll(".project")
@@ -108,68 +109,68 @@ function changeProject(){
     projectsNumber.innerText = projects.length
 
     let counter = 0;
-    function reset(){
-        for (let project of projects){
-            if(projects[counter] != project){
-            project.style.transition = "none"
-            project.classList.add("passive-project-left")
-            project.classList.add("passive-project-right")
+    function reset() {
+        for (let project of projects) {
+            if (projects[counter] != project) {
+                project.style.transition = "none"
+                project.classList.add("passive-project-left")
+                project.classList.add("passive-project-right")
             }
         }
-        projectNumber.innerText = counter+1
+        projectNumber.innerText = counter + 1
     }
-    function resetRight(){
-        for (let project of projects){
-            if(projects[counter] != project){
-            project.style.transition = "none"
-            project.classList.add("passive-project-right")
-            project.classList.remove("passive-project-left")
-            }
-        }
-    }
-    function resetLeft(){
-        for (let project of projects){
-            if(projects[counter] != project){
-            project.style.transition = "none"
-            project.classList.add("passive-project-left")
-            project.classList.remove("passive-project-right")
+    function resetRight() {
+        for (let project of projects) {
+            if (projects[counter] != project) {
+                project.style.transition = "none"
+                project.classList.add("passive-project-right")
+                project.classList.remove("passive-project-left")
             }
         }
     }
-    function prevProject(){ 
+    function resetLeft() {
+        for (let project of projects) {
+            if (projects[counter] != project) {
+                project.style.transition = "none"
+                project.classList.add("passive-project-left")
+                project.classList.remove("passive-project-right")
+            }
+        }
+    }
+    function prevProject() {
         resetLeft()
         projects[counter].style.transition = "0.7s transform ease-in"
         projects[counter].classList.add("passive-project-right")
         counter--
-        counter = counter<0?projects.length-1:counter       
+        counter = counter < 0 ? projects.length - 1 : counter
         projects[counter].style.transition = "0.7s transform ease-in"
         projects[counter].classList.remove("passive-project-left")
-        projectNumber.innerText = counter+1
+        projectNumber.innerText = counter + 1
 
     }
-    function nextProject(){
+    function nextProject() {
         reset()
         resetRight()
         projects[counter].style.transition = "0.7s transform ease-in"
         projects[counter].classList.add("passive-project-left")
         counter++
-        counter = counter==projects.length?0:counter
-        
-       
+        counter = counter == projects.length ? 0 : counter
+
+
         projects[counter].style.transition = "0.7s transform ease-in"
         projects[counter].classList.remove("passive-project-right")
-        projectNumber.innerText = counter+1
+        projectNumber.innerText = counter + 1
 
     }
     reset()
     prevProject()
     nextProject()
 }
-function skills(){
-    function activateSkill(){
-        for( let skill of skills){
+function skills() {
+    function activateSkill() {
+        for (let skill of skills) {
             skill.classList.add("passive")
-            if(skill.id == this.id){
+            if ((skill.id)[0] === (this.id)[0]) {
                 skill.classList.remove("passive")
             }
         }
@@ -181,76 +182,121 @@ function skills(){
     const othersBtn = document.querySelector(".btn-others")
     othersBtn.addEventListener("click", activateSkill)
     const skills = document.querySelectorAll(".skill")
-    activateSkill()
+    // activateSkill()
     skills[0].classList.remove("passive")
 
 }
-function emailFormCheck(){
+function emailFormCheck() {
     const formBtn = document.querySelector(".form-btn")
     const formCheckBox = document.querySelector(".spam-check input")
     const formCheckBoxLabels = document.querySelectorAll(".spam-check label")
     const formEmail = document.querySelector(".form-email")
     const formText = document.querySelector(".form-text")
-    formEmail.addEventListener("keydown", function (){
+    formEmail.addEventListener("keydown", function () {
         formEmail.style.borderColor = "rgb(219, 218, 218)"
     })
-    formText.addEventListener("keydown", function (){
+    formText.addEventListener("keydown", function () {
         formText.style.borderColor = "rgb(219, 218, 218)"
     })
-    formBtn.addEventListener("click", function(e){
-        if(formEmail.value == "" || !ValidateEmail(formEmail)){
+    formBtn.addEventListener("click", function (e) {
+        if (formEmail.value == "" || !ValidateEmail(formEmail)) {
             formEmail.style.borderColor = "#ff0404"
             e.preventDefault()
         }
-        if(formText.value == ""){
+        if (formText.value == "") {
             formText.style.borderColor = "#ff0404"
             formText.style.borderColor = "#ff0404"
             e.preventDefault()
         }
-        if(formCheckBox.checked == false){
-            for(let formCheckBoxLabel of formCheckBoxLabels){
-            formCheckBoxLabel.style.color = "#ff0404"
+        if (formCheckBox.checked == false) {
+            for (let formCheckBoxLabel of formCheckBoxLabels) {
+                formCheckBoxLabel.style.color = "#ff0404"
             }
             e.preventDefault()
         }
     })
-    function ValidateEmail(inputText)
-        {
+    function ValidateEmail(inputText) {
         var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(inputText.value.match(mailformat))
-        {
-        
-        return true;
+        if (inputText.value.match(mailformat)) {
+
+            return true;
         }
-        else
-        {
-        
-        return false;
+        else {
+
+            return false;
         }
-        }
+    }
 }
-const notRobot = function() {
+const notRobot = function () {
     const notRobotBoxs = document.querySelectorAll(".spam-check label")
     const checkbox = document.querySelector(".spam-check input")
     checkbox.addEventListener("click", checkBlack)
-    function checkBlack(){
-        if(checkbox.checked){
-            for(let notRobotBox of notRobotBoxs){
+    function checkBlack() {
+        if (checkbox.checked) {
+            for (let notRobotBox of notRobotBoxs) {
                 notRobotBox.style.color = "#504E4E"
             }
         }
     }
-    for(let notRobotBox of notRobotBoxs){
-        notRobotBox.addEventListener("click",spamCheck)
+    for (let notRobotBox of notRobotBoxs) {
+        notRobotBox.addEventListener("click", spamCheck)
     }
-    function spamCheck(){
+    function spamCheck() {
         checkbox.checked = !checkbox.checked
-        for(let notRobotBox of notRobotBoxs){
+        for (let notRobotBox of notRobotBoxs) {
             notRobotBox.style.color = "#504E4E"
         }
     }
 }
 // ======================= 3D animace ===============================
+function animaceSkills() {
+    var skillsText = ["#frontend-skills", "#backend-skills", "#others-skills"];
+    var skillsBtn = ["#frontend-btn", "#backend-btn", "#others-btn"];
+
+    skillsText.forEach((skillText, index) => {
+        const skillBtn = skillsBtn[index];
+        console.log(skillBtn, skillText);
+        //Movement Animation to happen
+        const card = document.querySelector(skillText);
+        const container = document.querySelector(skillBtn);
+        //Items
+        const headlineSkills = document.querySelectorAll(skillText + " h1");
+        const textSkills = document.querySelector(skillText + " h2");
+
+
+        //Moving Animation Event
+        container.addEventListener("mousemove", (e) => {
+            let xAxis = (container.offsetWidth / 2 - e.offsetX) * -1 / 3.5;
+            let yAxis = (container.offsetHeight / 2 - e.offsetY) / 1.5;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            console.log(yAxis)
+            console.log(xAxis)
+
+        });
+        //Animate In
+        container.addEventListener("mouseenter", (e) => {
+            card.style.transition = "none";
+            //Popout
+            for (let headlineSkill of headlineSkills) {
+                headlineSkill.style.transform = "translateZ(175px)";
+            }
+            textSkills.style.transform = "translateZ(150px)";
+            textSkills.style.transform = "translateZ(150px)";
+
+        });
+        //Animate Out
+        container.addEventListener("mouseleave", (e) => {
+            card.style.transition = "all 0.5s ease";
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            //Popback
+            for (let headlineSkill of headlineSkills) {
+                headlineSkill.style.transform = "translateZ(0px)";
+            }
+            textSkills.style.transform = "translateZ(0px)";
+
+        });
+    });
+}
 
 
 
@@ -265,3 +311,4 @@ notRobot();
 emailFormCheck();
 closeGallery();
 openGallery();
+animaceSkills()

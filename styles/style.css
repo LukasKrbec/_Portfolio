@@ -10,6 +10,7 @@ body{
     background-color: #eeeeee;
     font-size: 100%;
 
+
 }
 a{
     text-decoration: none;
@@ -511,6 +512,8 @@ aside {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(12, 1fr);
+        perspective: 1000px;
+
 }
 .skill
 {
@@ -519,8 +522,10 @@ aside {
     grid-row: 2/12;
     box-shadow: 4px 4px 10px #CFC9C9; 
     padding: 3em;  
+    transform-style: preserve-3d;
 }
     .skills h1{
+        z-index: 3;
         font-size: 4em;
         font-weight: 700;
         color: rgb(20, 20, 20);
@@ -530,6 +535,7 @@ aside {
             color: #ff0404;
         }
     .skills h2{
+        z-index:3;
         font-size: 2em;
         font-weight: 400;
         color: #827E7E;
@@ -549,6 +555,7 @@ aside {
     .btn-frontend,
     .btn-backend,
     .btn-others{
+
         cursor: pointer;
         display: block;
         background-color: #ff0404;
